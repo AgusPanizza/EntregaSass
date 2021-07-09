@@ -1,0 +1,189 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    }
+/* Inicio de css*/
+
+/*COLORES*/ 
+$ColorRambla: whitesmoke;
+$ColorContacto: black;  
+$ColorPatisserie: rgb(184, 179, 179);
+$ColorFooter: rgba(2, 68, 85, 0.767);
+
+/*FUENTE*/
+$FuenteRambla: 'Reem Kufi', sans-serif;
+
+/*NAV INDEX*/
+header{
+    ul{
+       li{
+           font-family:$FuenteRambla; 
+           font-size: 18px;
+           font-weight: 100;
+        a:link{
+        text-decoration: none;  
+        color: $ColorRambla;
+        }
+        a:visited{
+        text-decoration: none;  
+        color: $ColorRambla;
+        }
+      }
+      li:hover{
+        a:hover{
+        color: $ColorFooter;
+      }
+      }       
+       }
+   }
+
+/*BODY INDEX*/
+.IndexNav{
+    background-size:cover;
+    background-position: center;
+    text-decoration: none;
+    list-style: none;
+    animation-name: imagenes;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    height: 100%;
+
+    div{
+        font-family: $FuenteRambla;
+        text-align: center;
+        font-size: 100px;
+        color: $ColorRambla;
+        display: flex;
+        justify-content: end;
+        padding-top: 18%;
+    }
+
+  }
+
+  @keyframes imagenes{
+    0%{
+      background-image: url(../Imagenes/Entrega.jpg);
+    }
+
+    25%{
+      background-image: url(../Imagenes/Entrada.jpeg);
+    }
+    
+    50%{
+      background-image: url(../Imagenes/Vaso.jpg);
+    }
+
+    75%{
+      background-image: url(../Imagenes/Max.jpg);
+    }
+
+    100%{
+      background-image: url(../Imagenes/Cafecito.jpeg);
+    }
+   }
+
+/*FOOTER*/
+footer{
+    font-family: $FuenteRambla;
+    background-color: $ColorFooter;
+    display: flex;
+    color: $ColorRambla;
+    font-size: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-right: 2%;
+    }
+
+/* BODY CONTACTO*/
+.Contacto{
+    background-image: url(../Imagenes/Ella.jpeg);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+  
+  #IG{
+    color: rgba(2, 68, 85, 0.767) ;
+  }
+  img{
+    margin: 10px;
+  }
+
+  main{
+    div{
+    font-family: $FuenteRambla;
+    color:$ColorContacto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 15px;
+    }
+    ul{
+        color: $ColorPatisserie; 
+        text-align:center;
+    }
+  }
+
+/* BODY PATISSERIE*/
+.Patisserie{
+    background-image: url(../Imagenes/LLuvia.jpeg);
+    @extend .Contacto;
+  }
+
+/* BODY NUESTRO CAFE*/
+
+//MIXIN
+@mixin nicaragua ($colorTexto, $colorFondo, $tamanioTexo, $fuente){
+  color: $colorTexto;
+  background-color: $colorFondo;
+  font-size: $tamanioTexo;
+  font-family: $fuente ;
+}
+
+.NuestroCafe{
+
+    background-image: url(../Imagenes/bg.jpg);
+    @extend .Contacto;
+
+  .section-heading{
+    .section-heading-upper {
+      display: block;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .section-heading .section-heading-lower {
+      display: block;
+      font-size: 3rem;
+      font-weight: 100;
+    }
+  }
+
+  .bg-faded {
+    @include nicaragua (black, #f6e1c5 ,15px, $FuenteRambla )
+    }
+
+    @media (min-width: 992px) {
+      .about-heading .about-heading-img {
+        position: relative;
+        z-index: 0;
+      }
+      .about-heading .about-heading-content {
+        margin-top: -5rem;
+        position: relative;
+        z-index: 1;
+      }
+    }
+}
+
+
+
+
+
