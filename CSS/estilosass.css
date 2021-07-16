@@ -28,13 +28,13 @@ header ul li:hover a:hover {
 /*BODY INDEX*/
 .IndexNav {
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   text-decoration: none;
   list-style: none;
   animation-name: imagenes;
   animation-duration: 25s;
   animation-iteration-count: infinite;
-  height: 100%; }
+  height: 900px; }
   .IndexNav div {
     font-family: "Reem Kufi", sans-serif;
     text-align: center;
@@ -42,19 +42,23 @@ header ul li:hover a:hover {
     color: whitesmoke;
     display: flex;
     justify-content: end;
-    padding-top: 18%; }
+    padding-top: 20%; }
+    @media only screen and (max-width: 600px) {
+      .IndexNav div {
+        font-size: 60px;
+        padding-top: 50%; } }
 
 @keyframes imagenes {
   0% {
-    background-image: url(../Imagenes/Entrega.jpg); }
+    background-image: url(../Imagenes/Entrega.png); }
   25% {
-    background-image: url(../Imagenes/Entrada.jpeg); }
+    background-image: url(../Imagenes/Entrada.png); }
   50% {
-    background-image: url(../Imagenes/Vaso.jpg); }
+    background-image: url(../Imagenes/Vaso.png); }
   75% {
-    background-image: url(../Imagenes/Max.jpg); }
+    background-image: url(../Imagenes/Max.png); }
   100% {
-    background-image: url(../Imagenes/Cafecito.jpeg); } }
+    background-image: url(../Imagenes/Cafecito.png); } }
 
 /*FOOTER*/
 footer {
@@ -68,10 +72,10 @@ footer {
   padding-right: 2%; }
 
 /* BODY CONTACTO*/
-.Contacto, .Patisserie, .NuestroCafe {
-  background-image: url(../Imagenes/Ella.jpeg);
+.Contacto, .Patisserie, .NuestroCafe, .Nosotros {
+  background-image: url(../Imagenes/Ella.png);
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed; }
 
 #IG {
@@ -96,11 +100,17 @@ main ul {
 
 /* BODY PATISSERIE*/
 .Patisserie {
-  background-image: url(../Imagenes/LLuvia.jpeg); }
+  background-image: url(../Imagenes/LLuvia.png); }
+  .Patisserie h1 {
+    font-family: "Reem Kufi", sans-serif;
+    color: #555353;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; }
 
-/* BODY NUESTRO CAFE*/
+/* BODY NUESTRO CAFE */
 .NuestroCafe {
-  background-image: url(../Imagenes/bg.jpg); }
+  background-image: url(../Imagenes/Granos.png); }
   .NuestroCafe .section-heading .section-heading-upper {
     display: block;
     font-size: 1rem;
@@ -109,7 +119,14 @@ main ul {
     display: block;
     font-size: 3rem;
     font-weight: 100; }
-  .NuestroCafe .bg-faded {
+  .NuestroCafe .MenuCafe {
+    color: black;
+    background-color: #f6e1c59d;
+    font-size: 15px;
+    font-family: "Reem Kufi", sans-serif;
+    margin-left: 100px;
+    margin-right: 100px; }
+  .NuestroCafe .Granos-faded {
     color: black;
     background-color: #f6e1c5;
     font-size: 15px;
@@ -122,3 +139,52 @@ main ul {
       margin-top: -5rem;
       position: relative;
       z-index: 1; } }
+  @media (min-width: 768px) {
+    .NuestroCafe .about-heading .about-heading-img {
+      position: relative;
+      z-index: 0; }
+    .NuestroCafe .about-heading .about-heading-content {
+      margin-top: -5rem;
+      position: relative;
+      z-index: 1; } }
+  @media (min-width: 600px) {
+    .NuestroCafe .about-heading .about-heading-img {
+      position: relative;
+      z-index: 0; }
+    .NuestroCafe .about-heading .about-heading-content {
+      margin-top: -5rem;
+      position: relative;
+      z-index: 1; } }
+
+/* BODY NOSOTROS*/
+.Nosotros {
+  background-image: url(../Imagenes/Delantal.png);
+  height: 500px; }
+  @media only screen and (max-width: 600px) {
+    .Nosotros {
+      background-image: url(../Imagenes/Delantalmobiledevices.png);
+      height: 550px; } }
+  @media only screen and (min-width: 600px) {
+    .Nosotros {
+      background-image: url(../Imagenes/Delantal.png); } }
+
+.team {
+  font-family: "Reem Kufi", sans-serif;
+  background-color: rgba(240, 235, 235, 0.493); }
+  .team .team-member {
+    margin-bottom: 3rem;
+    text-align: center; }
+    .team .team-member h4 {
+      margin-top: 1.5rem;
+      margin-bottom: 0; }
+    .team .team-member img {
+      width: 14rem;
+      height: 14rem;
+      border: 0.5rem solid rgba(0, 0, 0, 0.1); }
+    .team .team-member img:hover {
+      transform: scale(1.3, 1.3); }
+    .team .team-member #IG {
+      border: none;
+      height: 40px;
+      width: 40px;
+      transform: none; }
